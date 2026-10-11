@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lab name="FortiGate_Lab" version="1" scripttimeout="300" lock="0" author="Salman">
+  <topology>
+    <nodes>
+      <node id="1" name="Fortinet" type="qemu" template="fortinet" image="fortinet-FGT-v7.4.12" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="4" uuid="29e32004-bb45-4354-b946-ad459013796b" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -display none -vga std -rtc base=utc" qemu_version="4.1.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Firewall-2D-FGT-S.svg" config="0" left="426" top="372">
+        <interface id="0" name="port1" type="ethernet" network_id="1"/>
+      </node>
+    </nodes>
+    <networks>
+      <network id="1" type="pnet0" name="Net" left="678" top="381" visibility="1" icon="01-Cloud-Default.svg"/>
+    </networks>
+  </topology>
+</lab>
