@@ -217,12 +217,9 @@ All screenshots live in the [`screenshots/`](./screenshots) folder:
 
 | File | Description |
 | --- | --- |
-| `01-fortigate-cli-login-license.png` | CLI login, trial license request & `no update error` status |
+| `01-gui-dashboard.png` | FortiGate GUI dashboard — system info, license status, CPU/Memory |
 | `02-fortigate-cli-day1-config.png` | Full Day-1 CLI session: DNS, static route, port1 IP, `allowaccess`, Internet pings |
 | `03-cmd-ping-firewall.png` | Workstation ping to 192.168.194.158 — 0% loss |
-| `04-gui-dashboard.png` | FortiGate GUI dashboard — system info, license status, CPU/Memory |
-| `05-github-repo-structure.png` | Lab repository directory structure on GitHub |
-
 ## References
 
 - FortiGate Firewall Training Series — Day 5: *EVE-NG Lab Setup* (YouTube transcript) — image download from `support.fortinet.com`, WinSCP import, image naming convention
