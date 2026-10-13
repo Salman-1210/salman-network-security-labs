@@ -1,80 +1,95 @@
 # Network Security Labs — Salman
 
-Hands-on network security labs built in EVE-NG, covering Palo Alto firewall, Cisco ISE, and Fortinet FortiGate. Each lab includes topology diagrams, device configs, and troubleshooting notes.
+Hands-on network security labs built in **EVE-NG**, covering **Palo Alto**, **Cisco ISE**, and **Fortinet FortiGate**.
+Each lab includes topology diagrams, device configurations, verification steps, and troubleshooting notes from real lab sessions.
 
-&gt; Currently studying toward: **PCNSA** (Palo Alto) · **NSE 4** (Fortinet) · **Cisco ISE Specialist**
-
----
-
-## 📁 Lab Index (15+ Labs Planned & In-Progress)
-
-### Palo Alto Firewall (PAN-OS)
-
-| # | Lab | Topics Covered | Status |
-|---|-----|---------------|--------|
-| 01 | Basic Setup & Interface Config | Management access, L3 interfaces, DHCP, Virtual Router | ✅ Completed |
-| 02 | Security Zones | Zone mapping, interface configuration, basic zone defense | ✅ Completed |
-| 03 | TAP Interface & Zone | Passive monitoring, SPAN/Mirror port, session analysis | ✅ Completed |
-| 04 | Virtual Wire (Vwire) Interface | Transparent bridge, bump-in-the-wire, policy inspection | ✅ Completed |
-| 05 | Security Policies | Rule ordering, app-based rules, default deny | 🔄 In Progress |
-| 06 | NAT Policies | Source/dest NAT, U-turn NAT | ⏳ Upcoming |
-| 07 | GlobalProtect VPN | Portal, gateway, split tunnel | ⏳ Upcoming |
-| 08 | SSL Decryption | Forward proxy, exclusions | ⏳ Upcoming |
-
-### Cisco ISE
-
-| # | Lab | Topics Covered | Status |
-|---|-----|---------------|--------|
-| 01 | Initial Setup & Admin Access | Node config, certificates | ⏳ Upcoming |
-| 02 | RADIUS Authentication | Network devices, test auth | ⏳ Upcoming |
-| 03 | 802.1X Wired | Auth policy, switch config | ⏳ Upcoming |
-
-### Fortinet FortiGate
-
-| # | Lab | Topics Covered | Status |
-|---|-----|---------------|--------|
-| 01 | Basic Setup & Policies | Interfaces, zones, firewall rules | ⏳ Upcoming |
-| 02 | IPSec VPN | Site-to-site, IKEv2, tunnel monitor | ⏳ Upcoming |
-| 03 | Web Filtering & App Control | Security profiles, categories | ⏳ Upcoming |
-
-### Multi-Vendor Integration
-
-| # | Lab | Topics Covered | Status |
-|---|-----|---------------|--------|
-| 01 | PA + ISE User-ID Integration | User-ID agent, identity policy | ⏳ Upcoming |
-| 02 | Full Office Network Simulation | PA + FortiGate + ISE together | ⏳ Upcoming |
+> 🎯 Currently studying toward: **PCNSA** (Palo Alto) · **NSE 4** (Fortinet) · **Cisco ISE Specialist**
 
 ---
 
-## Lab Environment
+## 📂 Repository Structure
 
-- **Platform:** EVE-NG Community Edition
-- **Palo Alto:** PAN-OS VM-Series
-- **Fortinet:** FortiGate VM
-- **Cisco:** ISE / CML
-- **Diagram tool:** draw.io
+```javascript
+├── palo-alto-labs/     # Palo Alto firewall labs (PAN-OS)
+├── fortigate-labs/     # Fortinet FortiGate labs
+├── cisco-ise-labs/     # Cisco ISE labs (planned in enar future)
+├── *.md                # Shared notes (fundamentals, firewall theory)
+└── README.md           # You are here
+```
 
----
+Each vendor folder contains numbered labs:
 
-## Each Lab Contains
+```javascript
+palo-alto-labs/
+├── lab-01-initial-configuration/
+│   ├── README.md        ← full write-up: objective, topology, steps, fixes
+│   ├── screenshots/     ← configs, logs, verification output
+│   └── eve-ng-topology.unl
+├── lab-02-security-zones/
+└── ...
+```
 
-- `README.md` — objective, topology, steps, what broke & how I fixed it
-- `topology.png` / `.unl` — network diagram & EVE-NG topology files
-- `configs/` — sanitised device configuration files
-- `screenshots/` / direct images — key results and log outputs
-
----
-
-## How to Navigate
-
-Each vendor has its own folder (e.g., `palo-alto-labs`). Inside each folder, labs are numbered in order of complexity — start from `01` and work forward.
-
----
-
-## Progress Timeline
-
-Started: May 2026 | Target cert date: Nov 2026
+**Lab numbers follow order of complexity — start from `lab-01` and work forward.**
 
 ---
 
-*All configs are sanitised — no real IPs, credentials, or sensitive data.*
+## 🧪 What Each Lab Contains
+
+| Item | Description |
+| --- | --- |
+| `README.md` | Lab objective, topology, step-by-step config, verification, and *what broke & how I fixed it* |
+| `topology.png` | Network diagram |
+| `screenshots/` | Key configs, dashboards, and log output proving the lab works |
+| `eve-ng-topology.unl` | Importable EVE-NG topology file |
+| `configs/` | Sanitised device configurations (CLI) |
+
+> Every lab README follows the same format: **Topology → Theory → Step-by-Step Config → Verification → Troubleshooting → Lessons Learned.**
+
+---
+
+## 🗺️ Topic Coverage
+
+**Palo Alto (PAN-OS):** initial setup, interfaces, security zones, TAP & Virtual Wire, security policies, NAT, GlobalProtect VPN, SSL decryption
+
+**FortiGate:** initial setup & deployment modes, interfaces & zones, firewall policies with NAT, DNS/routing, IPSec VPN, security profiles (web filter, app control)
+
+**Cisco ISE:** initial setup, RADIUS, 802.1X (planned in enar future)
+
+**Multi-vendor:** identity integration, full office network simulations
+
+*(New topics are added as labs are completed — check the vendor folders for the latest.)*
+
+---
+
+## 🖥️ Lab Environment
+
+| Component | Details |
+| --- | --- |
+| Platform | EVE-NG Community Edition |
+| Palo Alto | PAN-OS VM-Series |
+| Fortinet | FortiGate VM (v7.4.x) |
+| Cisco | ISE / CML |
+| Clients | Windows VMs, vIOS switches/routers |
+| Diagrams | draw.io |
+
+---
+
+## 🚀 How to Use These Labs
+
+1. Pick a vendor folder, start from the lowest-numbered lab
+2. Read the lab README first — it explains the theory before the config
+3. Rebuild the topology in EVE-NG (or import the `.unl` file)
+4. Follow the steps, then compare your output against the screenshots
+5. Stuck? Check the **Troubleshooting** section — it covers the mistakes I actually hit
+
+---
+
+## 📜 Notes
+
+- All configurations are **sanitised** — no real IPs, credentials, or sensitive data
+- Labs are written for learning purposes; validate everything before using in production
+- Progress timeline: started **May 2026**, certification target **November 2026**
+
+---
+
+*Documented by Salman — built lab by lab, mistake by mistake.*
