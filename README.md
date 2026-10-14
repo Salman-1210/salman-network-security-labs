@@ -12,7 +12,7 @@ Each lab includes topology diagrams, device configurations, verification steps, 
 ```javascript
 ├── palo-alto-labs/     # Palo Alto firewall labs (PAN-OS)
 ├── fortigate-labs/     # Fortinet FortiGate labs
-├── cisco-ise-labs/     # Cisco ISE labs (planned in enar future)
+├── cisco-ise-labs/     # Cisco ISE labs (planned in near future)
 ├── *.md                # Shared notes (fundamentals, firewall theory)
 └── README.md           # You are here
 ```
@@ -53,7 +53,7 @@ palo-alto-labs/
 
 **FortiGate:** initial setup & deployment modes, interfaces & zones, firewall policies with NAT, DNS/routing, IPSec VPN, security profiles (web filter, app control)
 
-**Cisco ISE:** initial setup, RADIUS, 802.1X (planned in enar future)
+**Cisco ISE:** initial setup, RADIUS, 802.1X (planned in near future)
 
 **Multi-vendor:** identity integration, full office network simulations
 
