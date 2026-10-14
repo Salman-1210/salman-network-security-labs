@@ -92,4 +92,4 @@ palo-alto-labs/
 
 ---
 
-*Documented by Salman — built lab by lab, mistake by mistake.*
+*Documented by Salman - Network Security Labs*
