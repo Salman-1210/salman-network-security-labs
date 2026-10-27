@@ -1,10 +1,10 @@
-# 🛡️ Lab 06 — FortiGate L3 Interfaces, Zones, and Source NAT Setup
+# Lab 06 — FortiGate L3 Interfaces, Zones, and Source NAT Setup
 
 A complete hands-on guide covering the theoretical concepts, EVE-NG lab implementation, zone segmentation, L3 interface configuration, Source NAT (SNAT), firewall policy setup, traffic generation, and real-world troubleshooting on FortiGate Firewalls (FortiOS v7.0.x / v7.4.x).
 
 ---
 
-## 📜 Table of Contents
+## Table of Contents
 1. [Overview & Theoretical Concepts](#-overview--theoretical-concepts)
    - [Layer 3 (L3) Interfaces](#1-layer-3-l3-interfaces)
    - [Security Zones & Network Segmentation](#2-security-zones--network-segmentation)
