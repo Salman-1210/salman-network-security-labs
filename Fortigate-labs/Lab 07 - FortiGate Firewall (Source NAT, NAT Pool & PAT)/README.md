@@ -1,10 +1,10 @@
-# 🌐 FortiGate Firewall: Source NAT, NAT Pool & PAT Deep Dive (Lab 12)
+# FortiGate Firewall: Source NAT, NAT Pool & PAT Deep Dive (Lab 12)
 
 A comprehensive, production-grade documentation covering the fundamentals of **Network Address Translation (NAT)**, its types, architectural requirements, CLI session verification, and hands-on configuration on **FortiGate Firewalls (FortiOS)**.
 
 ---
 
-## 📜 Table of Contents
+## Table of Contents
 - [1. Overview & Core Concepts](#1-overview--core-concepts)
   - [What is NAT & Why is it Required?](#what-is-nat--why-is-it-required)
   - [Types of IP Addresses](#types-of-ip-addresses)
