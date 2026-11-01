@@ -6,7 +6,7 @@ This document provides advanced theoretical concepts, detailed network topology 
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Overview and Theoretical Concepts](#1-overview-and-theoretical-concepts)
    - [What is Application Control?](#what-is-application-control)
