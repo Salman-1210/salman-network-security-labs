@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lab name="Salman_netsec_lab" version="1" scripttimeout="300" lock="0" author="Salman">
+  <topology>
+    <nodes>
+      <node id="1" name="Fortinet" type="qemu" template="fortinet" image="fortinet-v7.0.9" console="telnet" cpu="1" cpulimit="0" ram="2048" ethernet="4" uuid="46dd8fbc-532c-4ce3-a594-59c44671a86d" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -display none -vga std -rtc base=utc" qemu_version="4.1.0" qemu_arch="x86_64" qemu_nic="e1000" delay="0" icon="Firewall-2D-FGT-S.svg" config="0" left="591" top="378">
+        <interface id="0" name="port1" type="ethernet" network_id="2"/>
+        <interface id="1" name="port2" type="ethernet" network_id="3"/>
+        <interface id="2" name="port3" type="ethernet" network_id="1"/>
+      </node>
+      <node id="2" name="Linux2" type="qemu" template="linux" image="linux-tinycore-6.4" console="vnc" cpu="1" cpulimit="0" ram="256" ethernet="6" uuid="f54f027c-d78b-4d0c-b2f8-bab62e89d098" firstmac="00:50:00:00:02:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server-2D-Linux-S.svg" config="0" left="354" top="375">
+        <interface id="0" name="e0" type="ethernet" network_id="3"/>
+      </node>
+    </nodes>
+    <networks>
+      <network id="1" type="pnet0" name="Net" left="873" top="387" visibility="1" icon="Cloud-2D-Grey-S.svg"/>
+      <network id="2" type="pnet0" name="MGMT" left="588" top="201" visibility="1" icon="Desktop2.png"/>
+      <network id="3" type="bridge" name="Net-Fortinetiface_1" left="651" top="418" visibility="0" icon="lan.png"/>
+    </networks>
+  </topology>
+</lab>
