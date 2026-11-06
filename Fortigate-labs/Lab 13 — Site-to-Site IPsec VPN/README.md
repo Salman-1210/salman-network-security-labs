@@ -1,10 +1,10 @@
-# 🛡️ FortiGate Firewall: Site-to-Site IPsec VPN Complete Guide
+# FortiGate Firewall: Site-to-Site IPsec VPN Complete Guide
 
 Welcome to the comprehensive guide on **Site-to-Site IPsec VPN Configuration** on FortiGate Firewalls. This documentation is based on Day 18 of the FortiGate Firewall Series, covering both theoretical fundamentals and practical setup methods (Custom Phase-1/Phase-2 configuration and Template-based Wizard deployment).
 
 ---
 
-## 📌 Table of Contents
+## Table of Contents
 1. [Overview & Practical Usecase](#-overview--practical-usecase)
 2. [Theoretical Fundamentals: How IPsec Works](#-theoretical-fundamentals-how-ipsec-works)
 3. [Lab Topology & Address Scheme](#-lab-topology--address-scheme)
@@ -16,7 +16,7 @@ Welcome to the comprehensive guide on **Site-to-Site IPsec VPN Configuration** o
 
 ---
 
-## 🔐 Overview & Practical Usecase
+## Overview & Practical Usecase
 
 A **Site-to-Site IPsec VPN** connects two static networks across an untrusted public network (the Internet) through a secure, encrypted connection (tunnel).
 
@@ -30,7 +30,7 @@ A **Site-to-Site IPsec VPN** connects two static networks across an untrusted pu
 
 ---
 
-## 🧠 Theoretical Fundamentals: How IPsec Works
+## Theoretical Fundamentals: How IPsec Works
 
 IPsec (Internet Protocol Security) relies on a two-phase negotiation process using **IKE (Internet Key Exchange)** protocol:
 
@@ -53,4 +53,4 @@ IPsec (Internet Protocol Security) relies on a two-phase negotiation process usi
 
 ---
 
-## 🌐 Lab Topology & Address Scheme
+## Lab Topology & Address Scheme
