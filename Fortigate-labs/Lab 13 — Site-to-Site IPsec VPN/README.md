@@ -16,7 +16,7 @@ Welcome to the comprehensive guide on **Site-to-Site IPsec VPN Configuration** o
 
 ---
 
-## Overview & Practical Usecase
+## Overview & Practical Usecases
 
 A **Site-to-Site IPsec VPN** connects two static networks across an untrusted public network (the Internet) through a secure, encrypted connection (tunnel).
 
