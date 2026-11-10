@@ -4,7 +4,7 @@ A comprehensive, enterprise-grade laboratory and conceptual guide covering Forti
 
 ---
 
-## 📁 Repository Directory & File Structure Guide
+## Repository Directory & File Structure Guide
 
 To maintain consistency with your existing repository (`salman-network-security-labs/Fortigate-labs/`), create your next folder with the following exact structure:
 
@@ -27,7 +27,7 @@ salman-network-security-labs/
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [Executive Overview](#-executive-overview)
 - [Key Learning Objectives](#-key-learning-objectives)
@@ -51,7 +51,7 @@ salman-network-security-labs/
 
 ---
 
-## 🌐 Executive Overview
+##  xecutive Overview
 
 In modern enterprise architecture, organizations frequently need to connect disparate local area networks (LANs) across remote geographic locations—such as connecting a Head Office in Karachi to a Branch Office in Sharjah. Because public internet infrastructure is inherently untrusted, sensitive corporate data cannot be transmitted in plaintext. 
 
@@ -59,7 +59,7 @@ A **Site-to-Site IPsec VPN** creates a secure, encrypted virtual tunnel over the
 
 ---
 
-## 🎯 Key Learning Objectives
+## Key Learning Objectives
 
 - **Understand Site-to-Site Topologies:** Learn how to interconnect two separate enterprise networks (`10.1.1.0/24` and `20.1.1.0/24`) securely across a simulated public internet cloud.
 - **Master IPsec Phases:** Configure Internet Key Exchange (IKEv1) Phase 1 parameters (DES-SHA256, DH Group 5/14, PSK authentication) and Phase 2 selectors.
@@ -69,7 +69,7 @@ A **Site-to-Site IPsec VPN** creates a secure, encrypted virtual tunnel over the
 
 ---
 
-## 🧠 Conceptual Fundamentals: Site-to-Site IPsec VPN Architecture
+## Conceptual Fundamentals: Site-to-Site IPsec VPN Architecture
 
 ### Why Site-to-Site VPN is Critical for Enterprise Security
 When data travels between two enterprise offices over the internet, it passes through multiple third-party routers and ISPs. Without encryption, anyone on the path can capture packets using tools like Wireshark. An IPsec VPN encapsulates original layer-3 packets inside ESP (Encapsulating Security Payload) packets, ensuring confidentiality, integrity, and authentication.
@@ -81,7 +81,7 @@ An IPsec VPN is established in two distinct phases:
 
 ---
 
-## 🛠 Network Topology & Environment Specifications
+## Network Topology & Environment Specifications
 
 The laboratory setup is hosted on GNS3 / EVE-NG with the following topology:
 
@@ -271,7 +271,7 @@ PING 20.1.1.10 (20.1.1.10): 56 data bytes
 
 ---
 
-## 💡 Golden Troubleshooting Workflow for Future Labs
+## Golden Troubleshooting Workflow for Future Labs
 
 Whenever Site-to-Site IPsec VPN connectivity or traffic forwarding fails in FortiGate labs, follow this 3-step diagnostic checklist:
 
