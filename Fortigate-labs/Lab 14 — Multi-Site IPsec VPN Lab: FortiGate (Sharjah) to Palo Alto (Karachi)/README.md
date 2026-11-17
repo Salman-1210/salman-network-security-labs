@@ -167,4 +167,4 @@ Continuous ICMP ping tests were executed between the internal endpoints across t
 * **From Karachi (`Linux4` - `20.1.1.10`) to Sharjah (`Linux3` - `10.1.1.10`):** `64 bytes from 10.1.1.10: seq=210 ttl=62 time=14.203 ms` (0% packet loss)
 * **From Sharjah (`Linux3` - `10.1.1.10`) to Karachi (`Linux4` - `20.1.1.10`):** `64 bytes from 20.1.1.10: seq=241 ttl=62 time=11.927 ms` (0% packet loss)
 
-![Sharjah and Karachi End-to-End Ping Verification](sharjah-karachi-ping-test.jpg)
+![Sharjah and Karachi End-to-End Ping Verification](sharjah-karachi-ping-test.png)
