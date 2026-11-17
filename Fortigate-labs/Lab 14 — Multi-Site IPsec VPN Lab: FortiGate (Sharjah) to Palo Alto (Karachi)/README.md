@@ -55,32 +55,6 @@ The lab environment simulates a dedicated WAN link connecting a branch office in
 
 ---
 
-## 3. Repository Structure and GitHub Upload Guide
-
-To organize this lab inside your existing repository (`salman-network-security-labs`) alongside your previous labs, follow these steps:
-
-1. Open your GitHub repository: `https://github.com/Salman-1210/salman-network-security-labs`
-2. Navigate into the `Fortigate-labs` directory.
-3. Click **Add file** > **Create new file**.
-4. In the name field at the top, type the new folder name followed by a forward slash `/` and `README.md`:
-   ```text
-   Lab 06 — Multi-Site IPsec VPN (FortiGate to Palo Alto)/README.md
-   ```
-5. Paste the contents of this `README.md` file into the editor and click **Commit changes**.
-6. Inside that newly created `Lab 06 — Multi-Site IPsec VPN (FortiGate to Palo Alto)` folder, click **Add file** > **Upload files** and upload all 10 image files with their exact names so every embedded image renders properly:
-   * `Topology.png`
-   * `FG-Dashboard.png`
-   * `FG-Ipsec-config.png`
-   * `FG-Policy_config.png`
-   * `PA-Dashboard-config.png`
-   * `PA-VR-config.png`
-   * `PA-IKE-config.png`
-   * `Palo-Alto_Ipsec_config.png`
-   * `PA-Policies.png`
-   * `sharjah-karachi-ping-test.jpg` (or `sharjah-karachi-ping-test_2.jpg`)
-
----
-
 ## 4. Step-by-Step FortiGate Configuration (Sharjah)
 
 ### Step 4.1: System Verification and Time Synchronization
