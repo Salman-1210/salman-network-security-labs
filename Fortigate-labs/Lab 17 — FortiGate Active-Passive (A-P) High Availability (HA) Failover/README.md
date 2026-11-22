@@ -65,7 +65,7 @@ This lab implements and tests **FortiGate Active-Passive (A-P) High Availability
 
 ### Baseline Pre-Failover State (FGT-1 Primary)
 
-![Baseline pre-failover HA status on Fortinet2 and Fortinet1 with continuous Linux ping](before-failover-fgt1-primary.PNG)
+![Baseline pre-failover HA status on Fortinet2 and Fortinet1 with continuous Linux ping](before-failover-fgt1-primary.png)
 
 `before-failover-fgt1-primary.jpg` is a main reference capture showing the healthy pre-failover state. Both `Fortinet2` (`FGT-2`) and `Fortinet1` (`FGT-1`) show `MONDEV stats` with `port1` and `port2` `up` and `0` dropped/error packets. `FGT-1` (`FGVMEVFTWYP3UG9E`) is `Primary` (`vcluster 1: work 169.254.0.1`, `HA operating index = 0`) and `FGT-2` (`FGVMEV3YHZ83OA52`) is `Secondary` (`vcluster 1: standby 169.254.0.1`, `HA operating index = 1`). Below, the EVE-NG canvas and `Linux` terminal (`seq=998+`) show continuous ping replies from `192.168.20.1`.
 
@@ -77,7 +77,7 @@ This lab implements and tests **FortiGate Active-Passive (A-P) High Availability
 
 ### Post-Failover State (FGT-2 Primary)
 
-![Post-failover HA status showing FGT-2 as Primary and FGT-1 as Secondary with continuous ping](after_link_failure.PNG)
+![Post-failover HA status showing FGT-2 as Primary and FGT-1 as Secondary with continuous ping](after_link_failure.png)
 
 `after_link_failure.jpg` is a main reference capture taken after running `diagnose sys ha reset-uptime` on `FGT-1`. The HA roles swapped cleanly: `FGT-2` (`FGVMEV3YHZ83OA52`) is now `Primary` (`vcluster 1: work 169.254.0.2`, `HA operating index = 0`) and `FGT-1` (`FGVMEVFTWYP3UG9E`) is now `Secondary` (`vcluster 1: standby 169.254.0.2`, `HA operating index = 1`), with `MONDEV stats` showing `port1` and `port2` `up` and `0` drops/errors. In the `Linux` terminal (`seq=1781+`), ping replies from `192.168.20.1` continue smoothly with no loss of gateway reachability.
 
