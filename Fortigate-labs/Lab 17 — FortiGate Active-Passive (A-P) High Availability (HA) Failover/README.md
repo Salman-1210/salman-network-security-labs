@@ -1,7 +1,5 @@
 # Lab 17 — FortiGate Active-Passive (A-P) High Availability (HA) Failover
 
-Previous Lab Reference: [Lab 05 — FortiGate Interface Types (/ vs Redundant)](https://github.com/Salman-1210/salman-network-security-labs/tree/main/Fortigate-labs/Lab%2005%20%E2%80%94%20FortiGate%20Interface%20Types%20\(/%20vs%20Redundant\))
-
 ## Table of Contents
 
 * [Lab Overview](#lab-overview)
