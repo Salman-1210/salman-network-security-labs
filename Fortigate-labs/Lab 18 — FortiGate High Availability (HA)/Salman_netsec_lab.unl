@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lab name="Salman_netsec_lab" version="1" scripttimeout="300" lock="0" author="Salman">
+  <topology>
+    <nodes>
+      <node id="1" name="Fortinet1" type="qemu" template="fortinet" image="fortinet-v7.0.9" console="telnet" cpu="1" cpulimit="0" ram="2048" ethernet="4" uuid="ea1c179e-c12a-4237-92cc-412271de42a5" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -display none -vga std -rtc base=utc" qemu_version="4.1.0" qemu_arch="x86_64" qemu_nic="e1000" delay="0" icon="Firewall-2D-FGT-S.svg" config="0" left="273" top="375">
+        <interface id="0" name="port1" type="ethernet" network_id="2"/>
+        <interface id="1" name="port2" type="ethernet" network_id="4"/>
+        <interface id="2" name="port3" type="ethernet" network_id="5"/>
+      </node>
+      <node id="2" name="Fortinet2" type="qemu" template="fortinet" image="fortinet-v7.0.9" console="telnet" cpu="1" cpulimit="0" ram="2048" ethernet="4" uuid="203c4752-4b8a-463c-8320-8ae3332afd0e" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -display none -vga std -rtc base=utc" qemu_version="4.1.0" qemu_arch="x86_64" qemu_nic="e1000" delay="0" icon="Firewall-2D-FGT-S.svg" config="0" left="606" top="378">
+        <interface id="0" name="port1" type="ethernet" network_id="3"/>
+        <interface id="1" name="port2" type="ethernet" network_id="6"/>
+        <interface id="2" name="port3" type="ethernet" network_id="5"/>
+      </node>
+      <node id="3" name="Switch3" type="qemu" template="viosl2" image="viosl2-15.2" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="8" uuid="78b22eda-2158-49ff-bd87-64aeff165153" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.4.0" qemu_arch="x86_64" delay="0" icon="Switch-2D-L3-Generic-S.svg" config="0" left="444" top="210">
+        <interface id="1" name="Gi0/1" type="ethernet" network_id="3"/>
+        <interface id="2" name="Gi0/2" type="ethernet" network_id="1"/>
+        <interface id="3" name="Gi0/3" type="ethernet" network_id="2"/>
+      </node>
+      <node id="4" name="Switch4" type="qemu" template="viosl2" image="viosl2-15.2" console="telnet" cpu="1" cpulimit="0" ram="1024" ethernet="8" uuid="4aff0acc-3c63-41fa-b1a0-9f5825cb5145" qemu_options="-machine type=pc,accel=kvm -serial mon:stdio -nographic -no-user-config -nodefaults -rtc base=utc -cpu host" qemu_version="2.4.0" qemu_arch="x86_64" delay="0" icon="Switch-2D-L3-Generic-S.svg" config="0" left="441" top="471">
+        <interface id="0" name="Gi0/0" type="ethernet" network_id="7"/>
+        <interface id="1" name="Gi0/1" type="ethernet" network_id="4"/>
+        <interface id="2" name="Gi0/2" type="ethernet" network_id="6"/>
+      </node>
+      <node id="5" name="Linux" type="qemu" template="linux" image="linux-tinycore-6.4" console="vnc" cpu="2" cpulimit="0" ram="256" ethernet="1" uuid="8f75ec08-f928-4bde-b2e2-e3480cf22b84" firstmac="00:50:00:00:05:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server-2D-Linux-S.svg" config="0" left="447" top="621">
+        <interface id="0" name="e0" type="ethernet" network_id="7"/>
+      </node>
+    </nodes>
+    <networks>
+      <network id="1" type="pnet0" name="Net" left="444" top="96" visibility="1" icon="01-Cloud-Default.svg"/>
+      <network id="3" type="bridge" name="Net-Switch3iface_1" left="495" top="181" visibility="0" icon="lan.png"/>
+      <network id="5" type="bridge" name="Net-Fortinet1iface_2" left="298" top="250" visibility="0" icon="lan.png"/>
+      <network id="6" type="bridge" name="Net-Fortinet2iface_1" left="370" top="208" visibility="0" icon="lan.png"/>
+      <network id="4" type="bridge" name="Net-Fortinet1iface_1" left="437" top="404" visibility="0" icon="lan.png"/>
+      <network id="7" type="bridge" name="Net-Switch4iface_0" left="446" top="384" visibility="0" icon="lan.png"/>
+      <network id="2" type="bridge" name="Net-Fortinet1iface_0" left="437" top="238" visibility="0" icon="lan.png"/>
+    </networks>
+  </topology>
+  <objects>
+    <textobjects>
+      <textobject id="1" name="txt 1" type="text">
+        <data>PGRpdiBpZD0iY3VzdG9tVGV4dDE3OTU2OTE0OTEwMTkiIGNsYXNzPSJjdXN0b21TaGFwZSBjdXN0b21UZXh0IGNvbnRleHQtbWVudSIgZGF0YS1wYXRoPSIiIHN0eWxlPSJkaXNwbGF5OmlubGluZTtwb3NpdGlvbjphYnNvbHV0ZTtsZWZ0OjQyOXB4O3RvcDo2OTdweDsgY3Vyc29yOm1vdmU7IDt6LWluZGV4OjEwMDE7IiA+PHAgYWxpZ249ImNlbnRlciIgc3R5bGU9InZlcnRpY2FsLWFsaWduOnRvcDtjb2xvcjojMDAwMDAwO2JhY2tncm91bmQtY29sb3I6I2ZmZmZmZjtmb250LXNpemU6MTJweDtmb250LXdlaWdodDogYm9sZDsiPiAgIDEwLjEwLjEwLjEwLzI0ICAgICA8L3A+PC9kaXY+</data>
+      </textobject>
+      <textobject id="2" name="txt 2" type="text">
+        <data>PGRpdiBpZD0iY3VzdG9tVGV4dDIiIGNsYXNzPSJjdXN0b21TaGFwZSBjdXN0b21UZXh0IGNvbnRleHQtbWVudSB1aS1yZXNpemFibGUganRrLWRyYWdnYWJsZSBkcmFnc3RvcHBlZCIgZGF0YS1wYXRoPSIyIiBzdHlsZT0iZGlzcGxheTogaW5saW5lOyBwb3NpdGlvbjogYWJzb2x1dGU7IGxlZnQ6IDQyNnB4OyB0b3A6IDM4NHB4OyBjdXJzb3I6IG1vdmU7IHotaW5kZXg6IDEwMDE7Ij48cCBhbGlnbj0iY2VudGVyIiBzdHlsZT0idmVydGljYWwtYWxpZ246dG9wO2NvbG9yOiMwMDAwMDA7YmFja2dyb3VuZC1jb2xvcjojZmZmZmZmO2ZvbnQtc2l6ZToxMnB4O2ZvbnQtd2VpZ2h0OiBib2xkOyI+MTkyLjE2OC4xODguMTM1PC9wPjxkaXYgY2xhc3M9InVpLXJlc2l6YWJsZS1oYW5kbGUgdWktcmVzaXphYmxlLWUiIHN0eWxlPSJ6LWluZGV4OiA5MDsiPjwvZGl2PjxkaXYgY2xhc3M9InVpLXJlc2l6YWJsZS1oYW5kbGUgdWktcmVzaXphYmxlLXMiIHN0eWxlPSJ6LWluZGV4OiA5MDsiPjwvZGl2PjxkaXYgY2xhc3M9InVpLXJlc2l6YWJsZS1oYW5kbGUgdWktcmVzaXphYmxlLXNlIHVpLWljb24gdWktaWNvbi1ncmlwc21hbGwtZGlhZ29uYWwtc2UiIHN0eWxlPSJ6LWluZGV4OiA5MDsiPjwvZGl2PjwvZGl2Pg==</data>
+      </textobject>
+    </textobjects>
+  </objects>
+</lab>
