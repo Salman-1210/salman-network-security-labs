@@ -1,4 +1,4 @@
-# 🛡️ Lab 18 — FortiGate High Availability (HA) Failover, Failback & Session Continuity
+# Lab 18 — FortiGate High Availability (HA) Failover, Failback & Session Continuity
 
 [![FortiGate](https://img.shields.io/badge/FortiGate-v7.0.9-EE3124?style=for-the-badge&logo=fortinet&logoColor=white)](https://www.fortinet.com/)
 [![Environment](https://img.shields.io/badge/Lab-EVE--NG-0096D6?style=for-the-badge)](https://www.eve-ng.net/)
@@ -6,7 +6,7 @@
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 1. [Lab Overview & Objectives](#-lab-overview--objectives)
 2. [Network Topology](#-network-topology)
 3. [What I Learned Today](#-what-i-learned-today)
@@ -23,7 +23,7 @@
 
 ---
 
-## 🎯 Lab Overview & Objectives
+## Lab Overview & Objectives
 
 In **Lab 18**, I built upon the **Active-Passive (A-P) High Availability (HA)** architecture from Lab 17 to thoroughly test **cluster synchronization, baseline traffic flow, primary unit failover, and failback recovery** when the original Primary firewall comes back online.
 
@@ -37,7 +37,7 @@ The key objectives of this lab were:
 
 ---
 
-## 🌐 Network Topology
+## Network Topology
 
 ![Network Topology](Topology.png)
 
@@ -51,7 +51,7 @@ The key objectives of this lab were:
 
 ---
 
-## 🧠 What I Learned Today
+## What I Learned Today
 
 * **Failback Behavior & Latency Spikes:** When a failed Primary firewall (`FortiGate-1`) comes back online (with override enabled / higher priority `150`), the cluster renegotiates roles and shifts active traffic processing back to `FortiGate-1`. During this transition, active sessions experience a brief latency spike (e.g., jumping from `~20 ms` to `~185 ms`) without dropping the continuous connection.
 * **Virtual Cluster (`vcluster 1`) Mechanics:** Both FortiGates operate under a shared virtual cluster (`169.254.0.1` internal HA communication) using **Virtual MAC addresses**. This ensures that `Switch3` and `Switch4` do not need to relearn gateway IP addresses when roles switch.
@@ -60,7 +60,7 @@ The key objectives of this lab were:
 
 ---
 
-## ⚙️ What I Configured & Why
+## What I Configured & Why
 
 ### 1. Firewall Policy & NAT Configuration
 
@@ -86,7 +86,7 @@ The key objectives of this lab were:
 
 ---
 
-## 🔍 Step-by-Step Verification & Lab Walkthrough
+## Step-by-Step Verification & Lab Walkthrough
 
 ### Step 1: HA GUI Dashboard & Synchronization Status
 
@@ -114,7 +114,7 @@ The key objectives of this lab were:
 
 ### Step 3: Baseline Connectivity Test (Before Failover)
 
-![Test Before Failover](Test_before_Failover.jpg)
+![Test Before Failover](Test_before_Failover.png)
 
 * **Observation:** From the internal Linux machine (`10.10.10.10/24`), a continuous ping (`ping 8.8.8.8`) was initiated while `FortiGate-1` was active.
 * **Result:** Traffic flows smoothly through `FortiGate-1` with consistent, low round-trip latency averaging **`13 ms – 23 ms`** and **0% packet loss**.
@@ -143,7 +143,7 @@ The key objectives of this lab were:
 
 ---
 
-## 🔄 Complete End-to-End Traffic Flow & Device Architecture
+## Complete End-to-End Traffic Flow & Device Architecture
 
 Below is the complete step-by-step explanation of how every device interacts in this topology during normal operation, failover, and recovery:
 
